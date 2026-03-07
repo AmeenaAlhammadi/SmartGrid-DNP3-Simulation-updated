@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/basicbaseline -n .:../src $*
+# for shared lib, use: opp_run -l ../src/basicbaseline -n .:../src $*

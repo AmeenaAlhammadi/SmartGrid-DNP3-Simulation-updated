@@ -1,0 +1,3 @@
+package basicbaseline;
+
+@license(LGPL);
