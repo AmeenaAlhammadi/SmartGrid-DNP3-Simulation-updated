@@ -1,0 +1,1765 @@
+version 3
+run HeavyTraffic-0-20260308-04:32:39-34032
+attr configname HeavyTraffic
+attr datetime 20260308-04:32:39
+attr datetimef 20260308-043239
+attr experiment HeavyTraffic
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network DNP3NetworkTopology
+attr processid 34032
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config description "Heavy burst traffic scenario"
+config *.numMeters 50
+config *.distAuto.numMeters 50
+config **.eventInterval 1s
+config **.eventBytes 542
+config network DNP3NetworkTopology
+config sim-time-limit 200s
+config *.distAuto.processingDelay 10ms
+config **.totalPackets 10
+config **.ackTimeout 2s
+config *.meter[*].meterId index
+
+par DNP3NetworkTopology.meter[0].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[0].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[0].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[0].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[0].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[0].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[1].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[1].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[1].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[1].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[1].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[1].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[2].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[2].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[2].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[2].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[2].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[2].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[3].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[3].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[3].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[3].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[3].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[3].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[4].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[4].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[4].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[4].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[4].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[4].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[5].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[5].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[5].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[5].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[5].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[5].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[6].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[6].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[6].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[6].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[6].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[6].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[7].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[7].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[7].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[7].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[7].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[7].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[8].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[8].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[8].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[8].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[8].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[8].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[9].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[9].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[9].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[9].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[9].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[9].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[10].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[10].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[10].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[10].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[10].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[10].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[11].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[11].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[11].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[11].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[11].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[11].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[12].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[12].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[12].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[12].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[12].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[12].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[13].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[13].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[13].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[13].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[13].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[13].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[14].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[14].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[14].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[14].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[14].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[14].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[15].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[15].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[15].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[15].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[15].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[15].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[16].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[16].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[16].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[16].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[16].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[16].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[17].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[17].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[17].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[17].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[17].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[17].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[18].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[18].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[18].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[18].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[18].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[18].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[19].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[19].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[19].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[19].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[19].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[19].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[20].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[20].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[20].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[20].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[20].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[20].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[21].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[21].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[21].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[21].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[21].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[21].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[22].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[22].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[22].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[22].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[22].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[22].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[23].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[23].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[23].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[23].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[23].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[23].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[24].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[24].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[24].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[24].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[24].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[24].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[25].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[25].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[25].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[25].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[25].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[25].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[26].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[26].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[26].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[26].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[26].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[26].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[27].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[27].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[27].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[27].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[27].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[27].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[28].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[28].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[28].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[28].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[28].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[28].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[29].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[29].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[29].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[29].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[29].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[29].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[30].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[30].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[30].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[30].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[30].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[30].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[31].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[31].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[31].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[31].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[31].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[31].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[32].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[32].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[32].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[32].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[32].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[32].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[33].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[33].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[33].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[33].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[33].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[33].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[34].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[34].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[34].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[34].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[34].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[34].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[35].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[35].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[35].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[35].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[35].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[35].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[36].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[36].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[36].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[36].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[36].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[36].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[37].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[37].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[37].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[37].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[37].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[37].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[38].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[38].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[38].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[38].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[38].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[38].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[39].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[39].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[39].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[39].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[39].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[39].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[40].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[40].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[40].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[40].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[40].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[40].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[41].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[41].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[41].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[41].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[41].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[41].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[42].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[42].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[42].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[42].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[42].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[42].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[43].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[43].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[43].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[43].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[43].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[43].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[44].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[44].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[44].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[44].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[44].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[44].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[45].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[45].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[45].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[45].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[45].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[45].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[46].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[46].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[46].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[46].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[46].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[46].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[47].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[47].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[47].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[47].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[47].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[47].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[48].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[48].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[48].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[48].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[48].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[48].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[49].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[49].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[49].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[49].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[49].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[49].interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel per 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.DAInterface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.concentrator.DAInterface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.concentrator.DAInterface$o.channel delay 0.005s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.concentrator.DAInterface$o.channel datarate 128000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.concentrator.DAInterface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.concentrator.DAInterface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.distAuto.interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.distAuto.interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.distAuto.interface$o.channel delay 0.005s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.distAuto.interface$o.channel datarate 128000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.distAuto.interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.distAuto.interface$o.channel per 0
+attr mutable ""
+par DNP3NetworkTopology.meter[0] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[0] meterId 0
+par DNP3NetworkTopology.meter[0] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[0] eventBytes 542
+par DNP3NetworkTopology.meter[0] totalPackets 10
+par DNP3NetworkTopology.meter[0] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[1] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[1] meterId 1
+par DNP3NetworkTopology.meter[1] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[1] eventBytes 542
+par DNP3NetworkTopology.meter[1] totalPackets 10
+par DNP3NetworkTopology.meter[1] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[2] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[2] meterId 2
+par DNP3NetworkTopology.meter[2] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[2] eventBytes 542
+par DNP3NetworkTopology.meter[2] totalPackets 10
+par DNP3NetworkTopology.meter[2] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[3] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[3] meterId 3
+par DNP3NetworkTopology.meter[3] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[3] eventBytes 542
+par DNP3NetworkTopology.meter[3] totalPackets 10
+par DNP3NetworkTopology.meter[3] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[4] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[4] meterId 4
+par DNP3NetworkTopology.meter[4] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[4] eventBytes 542
+par DNP3NetworkTopology.meter[4] totalPackets 10
+par DNP3NetworkTopology.meter[4] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[5] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[5] meterId 5
+par DNP3NetworkTopology.meter[5] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[5] eventBytes 542
+par DNP3NetworkTopology.meter[5] totalPackets 10
+par DNP3NetworkTopology.meter[5] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[6] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[6] meterId 6
+par DNP3NetworkTopology.meter[6] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[6] eventBytes 542
+par DNP3NetworkTopology.meter[6] totalPackets 10
+par DNP3NetworkTopology.meter[6] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[7] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[7] meterId 7
+par DNP3NetworkTopology.meter[7] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[7] eventBytes 542
+par DNP3NetworkTopology.meter[7] totalPackets 10
+par DNP3NetworkTopology.meter[7] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[8] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[8] meterId 8
+par DNP3NetworkTopology.meter[8] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[8] eventBytes 542
+par DNP3NetworkTopology.meter[8] totalPackets 10
+par DNP3NetworkTopology.meter[8] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[9] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[9] meterId 9
+par DNP3NetworkTopology.meter[9] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[9] eventBytes 542
+par DNP3NetworkTopology.meter[9] totalPackets 10
+par DNP3NetworkTopology.meter[9] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[10] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[10] meterId 10
+par DNP3NetworkTopology.meter[10] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[10] eventBytes 542
+par DNP3NetworkTopology.meter[10] totalPackets 10
+par DNP3NetworkTopology.meter[10] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[11] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[11] meterId 11
+par DNP3NetworkTopology.meter[11] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[11] eventBytes 542
+par DNP3NetworkTopology.meter[11] totalPackets 10
+par DNP3NetworkTopology.meter[11] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[12] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[12] meterId 12
+par DNP3NetworkTopology.meter[12] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[12] eventBytes 542
+par DNP3NetworkTopology.meter[12] totalPackets 10
+par DNP3NetworkTopology.meter[12] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[13] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[13] meterId 13
+par DNP3NetworkTopology.meter[13] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[13] eventBytes 542
+par DNP3NetworkTopology.meter[13] totalPackets 10
+par DNP3NetworkTopology.meter[13] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[14] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[14] meterId 14
+par DNP3NetworkTopology.meter[14] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[14] eventBytes 542
+par DNP3NetworkTopology.meter[14] totalPackets 10
+par DNP3NetworkTopology.meter[14] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[15] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[15] meterId 15
+par DNP3NetworkTopology.meter[15] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[15] eventBytes 542
+par DNP3NetworkTopology.meter[15] totalPackets 10
+par DNP3NetworkTopology.meter[15] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[16] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[16] meterId 16
+par DNP3NetworkTopology.meter[16] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[16] eventBytes 542
+par DNP3NetworkTopology.meter[16] totalPackets 10
+par DNP3NetworkTopology.meter[16] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[17] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[17] meterId 17
+par DNP3NetworkTopology.meter[17] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[17] eventBytes 542
+par DNP3NetworkTopology.meter[17] totalPackets 10
+par DNP3NetworkTopology.meter[17] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[18] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[18] meterId 18
+par DNP3NetworkTopology.meter[18] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[18] eventBytes 542
+par DNP3NetworkTopology.meter[18] totalPackets 10
+par DNP3NetworkTopology.meter[18] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[19] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[19] meterId 19
+par DNP3NetworkTopology.meter[19] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[19] eventBytes 542
+par DNP3NetworkTopology.meter[19] totalPackets 10
+par DNP3NetworkTopology.meter[19] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[20] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[20] meterId 20
+par DNP3NetworkTopology.meter[20] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[20] eventBytes 542
+par DNP3NetworkTopology.meter[20] totalPackets 10
+par DNP3NetworkTopology.meter[20] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[21] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[21] meterId 21
+par DNP3NetworkTopology.meter[21] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[21] eventBytes 542
+par DNP3NetworkTopology.meter[21] totalPackets 10
+par DNP3NetworkTopology.meter[21] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[22] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[22] meterId 22
+par DNP3NetworkTopology.meter[22] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[22] eventBytes 542
+par DNP3NetworkTopology.meter[22] totalPackets 10
+par DNP3NetworkTopology.meter[22] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[23] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[23] meterId 23
+par DNP3NetworkTopology.meter[23] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[23] eventBytes 542
+par DNP3NetworkTopology.meter[23] totalPackets 10
+par DNP3NetworkTopology.meter[23] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[24] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[24] meterId 24
+par DNP3NetworkTopology.meter[24] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[24] eventBytes 542
+par DNP3NetworkTopology.meter[24] totalPackets 10
+par DNP3NetworkTopology.meter[24] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[25] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[25] meterId 25
+par DNP3NetworkTopology.meter[25] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[25] eventBytes 542
+par DNP3NetworkTopology.meter[25] totalPackets 10
+par DNP3NetworkTopology.meter[25] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[26] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[26] meterId 26
+par DNP3NetworkTopology.meter[26] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[26] eventBytes 542
+par DNP3NetworkTopology.meter[26] totalPackets 10
+par DNP3NetworkTopology.meter[26] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[27] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[27] meterId 27
+par DNP3NetworkTopology.meter[27] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[27] eventBytes 542
+par DNP3NetworkTopology.meter[27] totalPackets 10
+par DNP3NetworkTopology.meter[27] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[28] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[28] meterId 28
+par DNP3NetworkTopology.meter[28] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[28] eventBytes 542
+par DNP3NetworkTopology.meter[28] totalPackets 10
+par DNP3NetworkTopology.meter[28] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[29] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[29] meterId 29
+par DNP3NetworkTopology.meter[29] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[29] eventBytes 542
+par DNP3NetworkTopology.meter[29] totalPackets 10
+par DNP3NetworkTopology.meter[29] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[30] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[30] meterId 30
+par DNP3NetworkTopology.meter[30] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[30] eventBytes 542
+par DNP3NetworkTopology.meter[30] totalPackets 10
+par DNP3NetworkTopology.meter[30] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[31] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[31] meterId 31
+par DNP3NetworkTopology.meter[31] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[31] eventBytes 542
+par DNP3NetworkTopology.meter[31] totalPackets 10
+par DNP3NetworkTopology.meter[31] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[32] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[32] meterId 32
+par DNP3NetworkTopology.meter[32] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[32] eventBytes 542
+par DNP3NetworkTopology.meter[32] totalPackets 10
+par DNP3NetworkTopology.meter[32] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[33] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[33] meterId 33
+par DNP3NetworkTopology.meter[33] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[33] eventBytes 542
+par DNP3NetworkTopology.meter[33] totalPackets 10
+par DNP3NetworkTopology.meter[33] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[34] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[34] meterId 34
+par DNP3NetworkTopology.meter[34] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[34] eventBytes 542
+par DNP3NetworkTopology.meter[34] totalPackets 10
+par DNP3NetworkTopology.meter[34] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[35] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[35] meterId 35
+par DNP3NetworkTopology.meter[35] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[35] eventBytes 542
+par DNP3NetworkTopology.meter[35] totalPackets 10
+par DNP3NetworkTopology.meter[35] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[36] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[36] meterId 36
+par DNP3NetworkTopology.meter[36] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[36] eventBytes 542
+par DNP3NetworkTopology.meter[36] totalPackets 10
+par DNP3NetworkTopology.meter[36] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[37] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[37] meterId 37
+par DNP3NetworkTopology.meter[37] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[37] eventBytes 542
+par DNP3NetworkTopology.meter[37] totalPackets 10
+par DNP3NetworkTopology.meter[37] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[38] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[38] meterId 38
+par DNP3NetworkTopology.meter[38] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[38] eventBytes 542
+par DNP3NetworkTopology.meter[38] totalPackets 10
+par DNP3NetworkTopology.meter[38] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[39] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[39] meterId 39
+par DNP3NetworkTopology.meter[39] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[39] eventBytes 542
+par DNP3NetworkTopology.meter[39] totalPackets 10
+par DNP3NetworkTopology.meter[39] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[40] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[40] meterId 40
+par DNP3NetworkTopology.meter[40] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[40] eventBytes 542
+par DNP3NetworkTopology.meter[40] totalPackets 10
+par DNP3NetworkTopology.meter[40] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[41] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[41] meterId 41
+par DNP3NetworkTopology.meter[41] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[41] eventBytes 542
+par DNP3NetworkTopology.meter[41] totalPackets 10
+par DNP3NetworkTopology.meter[41] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[42] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[42] meterId 42
+par DNP3NetworkTopology.meter[42] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[42] eventBytes 542
+par DNP3NetworkTopology.meter[42] totalPackets 10
+par DNP3NetworkTopology.meter[42] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[43] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[43] meterId 43
+par DNP3NetworkTopology.meter[43] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[43] eventBytes 542
+par DNP3NetworkTopology.meter[43] totalPackets 10
+par DNP3NetworkTopology.meter[43] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[44] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[44] meterId 44
+par DNP3NetworkTopology.meter[44] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[44] eventBytes 542
+par DNP3NetworkTopology.meter[44] totalPackets 10
+par DNP3NetworkTopology.meter[44] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[45] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[45] meterId 45
+par DNP3NetworkTopology.meter[45] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[45] eventBytes 542
+par DNP3NetworkTopology.meter[45] totalPackets 10
+par DNP3NetworkTopology.meter[45] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[46] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[46] meterId 46
+par DNP3NetworkTopology.meter[46] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[46] eventBytes 542
+par DNP3NetworkTopology.meter[46] totalPackets 10
+par DNP3NetworkTopology.meter[46] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[47] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[47] meterId 47
+par DNP3NetworkTopology.meter[47] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[47] eventBytes 542
+par DNP3NetworkTopology.meter[47] totalPackets 10
+par DNP3NetworkTopology.meter[47] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[48] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[48] meterId 48
+par DNP3NetworkTopology.meter[48] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[48] eventBytes 542
+par DNP3NetworkTopology.meter[48] totalPackets 10
+par DNP3NetworkTopology.meter[48] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[49] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[49] meterId 49
+par DNP3NetworkTopology.meter[49] eventInterval 1s
+attr unit s
+par DNP3NetworkTopology.meter[49] eventBytes 542
+par DNP3NetworkTopology.meter[49] totalPackets 10
+par DNP3NetworkTopology.meter[49] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.concentrator typename "\"basicbaseline.Concatenator\""
+par DNP3NetworkTopology.distAuto typename "\"basicbaseline.DNP3DA\""
+par DNP3NetworkTopology.distAuto numMeters 50
+par DNP3NetworkTopology.distAuto processingDelay 0.01s
+attr unit s
+par DNP3NetworkTopology typename "\"basicbaseline.simulations.DNP3NetworkTopology\""
+par DNP3NetworkTopology numMeters 50
+

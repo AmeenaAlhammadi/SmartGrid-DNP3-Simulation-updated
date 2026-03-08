@@ -1,0 +1,548 @@
+file 321770 1772940324                                          
+version 3
+run LightTraffic-0-20260308-06:17:57-9172
+attr configname LightTraffic
+attr datetime 20260308-06:17:57
+attr datetimef 20260308-061757
+attr experiment LightTraffic
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network DNP3NetworkTopology
+attr processid 9172
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config description "Light traffic scenario"
+config *.numMeters 50
+config *.distAuto.numMeters 50
+config **.eventInterval 10s
+config **.eventBytes 442
+config network DNP3NetworkTopology
+config sim-time-limit 200s
+config output-scalar-file LightTraffic.sca
+config output-vector-file LightTraffic.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config *.distAuto.processingDelay 10ms
+config **.totalPackets 200
+config **.ackTimeout 2s
+config *.meter[*].meterId index
+
+vector 0 DNP3NetworkTopology.meter[0].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 1 DNP3NetworkTopology.concentrator.MeterInterface$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 2 DNP3NetworkTopology.meter[1].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 3 DNP3NetworkTopology.concentrator.MeterInterface$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 4 DNP3NetworkTopology.meter[2].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 5 DNP3NetworkTopology.concentrator.MeterInterface$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 6 DNP3NetworkTopology.meter[3].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 7 DNP3NetworkTopology.concentrator.MeterInterface$o[3].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 8 DNP3NetworkTopology.meter[4].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 9 DNP3NetworkTopology.concentrator.MeterInterface$o[4].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 10 DNP3NetworkTopology.meter[5].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 11 DNP3NetworkTopology.concentrator.MeterInterface$o[5].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 12 DNP3NetworkTopology.meter[6].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 13 DNP3NetworkTopology.concentrator.MeterInterface$o[6].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 14 DNP3NetworkTopology.meter[7].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 15 DNP3NetworkTopology.concentrator.MeterInterface$o[7].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 16 DNP3NetworkTopology.meter[8].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 17 DNP3NetworkTopology.concentrator.MeterInterface$o[8].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 18 DNP3NetworkTopology.meter[9].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 19 DNP3NetworkTopology.concentrator.MeterInterface$o[9].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 20 DNP3NetworkTopology.meter[10].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 21 DNP3NetworkTopology.concentrator.MeterInterface$o[10].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 22 DNP3NetworkTopology.meter[11].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 23 DNP3NetworkTopology.concentrator.MeterInterface$o[11].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 24 DNP3NetworkTopology.meter[12].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 25 DNP3NetworkTopology.concentrator.MeterInterface$o[12].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 26 DNP3NetworkTopology.meter[13].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 27 DNP3NetworkTopology.concentrator.MeterInterface$o[13].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 28 DNP3NetworkTopology.meter[14].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 29 DNP3NetworkTopology.concentrator.MeterInterface$o[14].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 30 DNP3NetworkTopology.meter[15].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 31 DNP3NetworkTopology.concentrator.MeterInterface$o[15].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 32 DNP3NetworkTopology.meter[16].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 33 DNP3NetworkTopology.concentrator.MeterInterface$o[16].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 34 DNP3NetworkTopology.meter[17].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 35 DNP3NetworkTopology.concentrator.MeterInterface$o[17].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 36 DNP3NetworkTopology.meter[18].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 37 DNP3NetworkTopology.concentrator.MeterInterface$o[18].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 38 DNP3NetworkTopology.meter[19].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 39 DNP3NetworkTopology.concentrator.MeterInterface$o[19].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 40 DNP3NetworkTopology.meter[20].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 41 DNP3NetworkTopology.concentrator.MeterInterface$o[20].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 42 DNP3NetworkTopology.meter[21].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 43 DNP3NetworkTopology.concentrator.MeterInterface$o[21].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 44 DNP3NetworkTopology.meter[22].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 45 DNP3NetworkTopology.concentrator.MeterInterface$o[22].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 46 DNP3NetworkTopology.meter[23].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 47 DNP3NetworkTopology.concentrator.MeterInterface$o[23].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 48 DNP3NetworkTopology.meter[24].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 49 DNP3NetworkTopology.concentrator.MeterInterface$o[24].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 50 DNP3NetworkTopology.meter[25].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 51 DNP3NetworkTopology.concentrator.MeterInterface$o[25].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 52 DNP3NetworkTopology.meter[26].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 53 DNP3NetworkTopology.concentrator.MeterInterface$o[26].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 54 DNP3NetworkTopology.meter[27].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 55 DNP3NetworkTopology.concentrator.MeterInterface$o[27].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 56 DNP3NetworkTopology.meter[28].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 57 DNP3NetworkTopology.concentrator.MeterInterface$o[28].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 58 DNP3NetworkTopology.meter[29].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 59 DNP3NetworkTopology.concentrator.MeterInterface$o[29].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 60 DNP3NetworkTopology.meter[30].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 61 DNP3NetworkTopology.concentrator.MeterInterface$o[30].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 62 DNP3NetworkTopology.meter[31].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 63 DNP3NetworkTopology.concentrator.MeterInterface$o[31].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 64 DNP3NetworkTopology.meter[32].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 65 DNP3NetworkTopology.concentrator.MeterInterface$o[32].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 66 DNP3NetworkTopology.meter[33].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 67 DNP3NetworkTopology.concentrator.MeterInterface$o[33].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 68 DNP3NetworkTopology.meter[34].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 69 DNP3NetworkTopology.concentrator.MeterInterface$o[34].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 70 DNP3NetworkTopology.meter[35].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 71 DNP3NetworkTopology.concentrator.MeterInterface$o[35].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 72 DNP3NetworkTopology.meter[36].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 73 DNP3NetworkTopology.concentrator.MeterInterface$o[36].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 74 DNP3NetworkTopology.meter[37].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 75 DNP3NetworkTopology.concentrator.MeterInterface$o[37].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 76 DNP3NetworkTopology.meter[38].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 77 DNP3NetworkTopology.concentrator.MeterInterface$o[38].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 78 DNP3NetworkTopology.meter[39].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 79 DNP3NetworkTopology.concentrator.MeterInterface$o[39].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 80 DNP3NetworkTopology.meter[40].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 81 DNP3NetworkTopology.concentrator.MeterInterface$o[40].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 82 DNP3NetworkTopology.meter[41].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 83 DNP3NetworkTopology.concentrator.MeterInterface$o[41].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 84 DNP3NetworkTopology.meter[42].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 85 DNP3NetworkTopology.concentrator.MeterInterface$o[42].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 86 DNP3NetworkTopology.meter[43].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 87 DNP3NetworkTopology.concentrator.MeterInterface$o[43].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 88 DNP3NetworkTopology.meter[44].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 89 DNP3NetworkTopology.concentrator.MeterInterface$o[44].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 90 DNP3NetworkTopology.meter[45].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 91 DNP3NetworkTopology.concentrator.MeterInterface$o[45].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 92 DNP3NetworkTopology.meter[46].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 93 DNP3NetworkTopology.concentrator.MeterInterface$o[46].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 94 DNP3NetworkTopology.meter[47].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 95 DNP3NetworkTopology.concentrator.MeterInterface$o[47].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 96 DNP3NetworkTopology.meter[48].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 97 DNP3NetworkTopology.concentrator.MeterInterface$o[48].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 98 DNP3NetworkTopology.meter[49].interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 99 DNP3NetworkTopology.concentrator.MeterInterface$o[49].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 100 DNP3NetworkTopology.concentrator.DAInterface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 101 DNP3NetworkTopology.distAuto.interface$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+0	18435 1659 0 10501 0 200 80 0 1 39 39
+1	20094 1768 0 10501 0 190.129038461538 78 0 1 38 38
+2	21862 1659 0 10501 0 200 80 0 1 39 39
+3	23521 1787 0 10501 0 190.156913461538 78 0 1 38 38
+4	25308 1659 0 10501 0 200 80 0 1 39 39
+5	26967 1787 0 10501 0 190.184788461538 78 0 1 38 38
+6	28754 1659 0 10501 0 200 80 0 1 39 39
+7	30413 1768 0 10501 0 190.212663461538 78 0 1 38 38
+8	32181 1659 0 10501 0 200 80 0 1 39 39
+9	33840 1768 0 10501 0 190.240538461538 78 0 1 38 38
+10	35608 1739 0 10501 0 200 80 0 1 39 39
+11	37347 1865 0 10501 0 190.268413461538 78 0 1 38 38
+12	39212 1739 0 10501 0 200 80 0 1 39 39
+13	40951 1865 0 10501 0 190.296288461538 78 0 1 38 38
+14	42816 1739 0 10501 0 200 80 0 1 39 39
+15	44555 1846 0 10501 0 190.324163461538 78 0 1 38 38
+16	46401 1739 0 10501 0 200 80 0 1 39 39
+17	48140 1846 0 10501 0 190.352038461538 78 0 1 38 38
+18	49986 1741 0 10501 0 200 80 0 1 39 39
+19	51727 1865 0 10501 0 190.379913461538 78 0 1 38 38
+20	53592 1741 0 10501 0 200 80 0 1 39 39
+21	55333 1865 0 10501 0 190.407788461538 78 0 1 38 38
+22	57198 1741 0 10501 0 200 80 0 1 39 39
+23	58939 1846 0 10501 0 190.435663461538 78 0 1 38 38
+24	60785 1741 0 10501 0 200 80 0 1 39 39
+25	62526 1846 0 10501 0 190.463538461538 78 0 1 38 38
+26	64372 1741 0 10501 0 200 80 0 1 39 39
+27	66113 1865 0 10501 0 190.491413461538 78 0 1 38 38
+28	67978 1741 0 10501 0 200 80 0 1 39 39
+29	69719 1865 0 10501 0 190.519288461538 78 0 1 38 38
+30	71584 1741 0 10501 0 200 80 0 1 39 39
+31	73325 1846 0 10501 0 190.547163461538 78 0 1 38 38
+32	75171 1741 0 10501 0 200 80 0 1 39 39
+33	76912 1846 0 10501 0 190.575038461538 78 0 1 38 38
+34	78758 1741 0 10501 0 200 80 0 1 39 39
+35	80499 1865 0 10501 0 190.602913461538 78 0 1 38 38
+36	82364 1741 0 10501 0 200 80 0 1 39 39
+37	84105 1865 0 10501 0 190.630788461538 78 0 1 38 38
+38	85970 1741 0 10501 0 200 80 0 1 39 39
+39	87711 1846 0 10501 0 190.658663461538 78 0 1 38 38
+40	89557 1741 0 10501 0 200 80 0 1 39 39
+41	91298 1846 0 10501 0 190.686538461538 78 0 1 38 38
+42	93144 1741 0 10501 0 200 80 0 1 39 39
+43	94885 1865 0 10501 0 190.714413461538 78 0 1 38 38
+44	96750 1741 0 10501 0 200 80 0 1 39 39
+45	98491 1865 0 10501 0 190.742288461538 78 0 1 38 38
+46	100356 1741 0 10501 0 200 80 0 1 39 39
+47	102097 1846 0 10501 0 190.770163461538 78 0 1 38 38
+48	103943 1741 0 10501 0 200 80 0 1 39 39
+49	105684 1846 0 10501 0 190.798038461538 78 0 1 38 38
+50	107530 1741 0 10501 0 200 80 0 1 39 39
+51	109271 1865 0 10501 0 190.825913461538 78 0 1 38 38
+52	111136 1741 0 10501 0 200 80 0 1 39 39
+53	112877 1865 0 10501 0 190.853788461538 78 0 1 38 38
+54	114742 1741 0 10501 0 200 80 0 1 39 39
+55	116483 1846 0 10501 0 190.881663461538 78 0 1 38 38
+56	118329 1741 0 10501 0 200 80 0 1 39 39
+57	120070 1846 0 10501 0 190.909538461538 78 0 1 38 38
+58	121916 1741 0 10501 0 200 80 0 1 39 39
+59	123657 1865 0 10501 0 190.937413461538 78 0 1 38 38
+60	125522 1741 0 10501 0 200 80 0 1 39 39
+61	127263 1865 0 10501 0 190.965288461538 78 0 1 38 38
+62	129128 1741 0 10501 0 200 80 0 1 39 39
+63	130869 1846 0 10501 0 190.993163461538 78 0 1 38 38
+64	132715 1741 0 10501 0 200 80 0 1 39 39
+65	134456 1846 0 10501 0 191.021038461538 78 0 1 38 38
+66	136302 1741 0 10501 0 200 80 0 1 39 39
+67	138043 1865 0 10501 0 191.048913461538 78 0 1 38 38
+68	139908 1741 0 10501 0 200 80 0 1 39 39
+69	141649 1865 0 10501 0 191.076788461538 78 0 1 38 38
+70	143514 1741 0 10501 0 200 80 0 1 39 39
+71	145255 1846 0 10501 0 191.104663461538 78 0 1 38 38
+72	147101 1741 0 10501 0 200 80 0 1 39 39
+73	148842 1846 0 10501 0 191.132538461538 78 0 1 38 38
+74	150688 1741 0 10501 0 200 80 0 1 39 39
+75	152429 1865 0 10501 0 191.160413461538 78 0 1 38 38
+76	154294 1741 0 10501 0 200 80 0 1 39 39
+77	156035 1865 0 10501 0 191.188288461538 78 0 1 38 38
+78	157900 1741 0 10501 0 200 80 0 1 39 39
+79	159641 1846 0 10501 0 191.216163461538 78 0 1 38 38
+80	161487 1741 0 10501 0 200 80 0 1 39 39
+81	163228 1846 0 10501 0 191.244038461538 78 0 1 38 38
+82	165074 1741 0 10501 0 200 80 0 1 39 39
+83	166815 1865 0 10501 0 191.271913461538 78 0 1 38 38
+84	168680 1741 0 10501 0 200 80 0 1 39 39
+85	170421 1865 0 10501 0 191.299788461538 78 0 1 38 38
+86	172286 1741 0 10501 0 200 80 0 1 39 39
+87	174027 1846 0 10501 0 191.327663461538 78 0 1 38 38
+88	175873 1741 0 10501 0 200 80 0 1 39 39
+89	177614 1846 0 10501 0 191.355538461538 78 0 1 38 38
+90	179460 1741 0 10501 0 200 80 0 1 39 39
+91	181201 1865 0 10501 0 191.383413461538 78 0 1 38 38
+92	183066 1741 0 10501 0 200 80 0 1 39 39
+93	184807 1865 0 10501 0 191.411288461538 78 0 1 38 38
+94	186672 1741 0 10501 0 200 80 0 1 39 39
+95	188413 1846 0 10501 0 191.439163461538 78 0 1 38 38
+96	190259 1743 0 10501 0 200 80 0 1 39 39
+97	192002 1848 0 10501 0 191.467038461538 78 0 1 38 38
+98	193850 1743 0 10501 0 200 80 0 1 39 39
+99	195593 1869 0 10501 0 191.494913461538 78 0 1 38 38
+100	197462 41730 0 10501 0 191.6189 1921 0 1 1900 1900
+101	239192 82576 0 10501 0 191.482775 3802 0 1 1900 1900
+

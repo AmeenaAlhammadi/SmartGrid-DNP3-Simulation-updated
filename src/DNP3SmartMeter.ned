@@ -18,6 +18,7 @@ package basicbaseline;
 simple DNP3SmartMeter
 {
     parameters:
+        @class(DNP3SmartMeter);
         int meterId;
         double eventInterval @unit(s) = default(10s);
         int eventBytes = default(442);

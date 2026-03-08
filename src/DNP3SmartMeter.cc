@@ -1,8 +1,10 @@
+#include <omnetpp.h>
 #include "DNP3SmartMeter.h"
 #include <cstring>
 
-Define_Module(DNP3SmartMeter);
+using namespace omnetpp;
 
+Define_Module(DNP3SmartMeter);
 void DNP3SmartMeter::initialize()
 {
     ackTimer = new cMessage("ackTimeout");
