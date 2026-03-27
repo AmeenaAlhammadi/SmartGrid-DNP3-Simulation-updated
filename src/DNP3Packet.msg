@@ -14,8 +14,9 @@
 //
 packet Dnp3Packet
 {
+    string msgType;
     int meterId = -1;
     int seq = 0;
-    string msgType;
-    bool burst = false;
+    simtime_t genTime;
+    bool retransmitted = false;
 }

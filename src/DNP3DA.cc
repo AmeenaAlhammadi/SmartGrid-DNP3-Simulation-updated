@@ -11,6 +11,7 @@ void DNP3DA::initialize()
 {
     numMeters = par("numMeters");
     processingDelay = par("processingDelay");
+    packetDelaySignal = registerSignal("packetDelay");
 }
 
 void DNP3DA::sendControlMessage(const char *name, const char *type, int meterId, int seq, int bytes)
@@ -19,8 +20,12 @@ void DNP3DA::sendControlMessage(const char *name, const char *type, int meterId,
     pkt->setMsgType(type);
     pkt->setMeterId(meterId);
     pkt->setSeq(seq);
-    pkt->setBurst(false);
     pkt->setByteLength(bytes);
+
+    if (strcmp(type, "ACK") == 0)
+        ackBytesTotal += bytes;
+    else if (strcmp(type, "CONFIRM") == 0)
+        confirmBytesTotal += bytes;
 
     cGate *outGate = gate("interface$o");
 
@@ -46,17 +51,28 @@ void DNP3DA::handleMessage(cMessage *msg)
 
     if (strcmp(pkt->getMsgType(), "EVENT_REPORT") == 0) {
 
+        receivedEventCount++;
+
+        eventBytesTotal += pkt->getByteLength();
+
+        simtime_t delay = simTime() - pkt->getGenTime();
+        emit(packetDelaySignal, delay);
+
         EV << "DA received EVENT_REPORT from meter "
            << pkt->getMeterId()
            << " seq=" << pkt->getSeq()
            << " size=" << pkt->getByteLength()
-           << " bytes\n";
+           << " bytes"
+           << " delay=" << delay
+           << " retransmitted=" << (pkt->getRetransmitted() ? "true" : "false")
+           << "\n";
 
-        // Updated packet sizes
         sendControlMessage("ack", "ACK", pkt->getMeterId(), pkt->getSeq(), 68);
         sendControlMessage("confirm", "CONFIRM", pkt->getMeterId(), pkt->getSeq(), 58);
     }
     else if (strcmp(pkt->getMsgType(), "TCP_ACK") == 0) {
+
+        tcpAckBytesTotal += pkt->getByteLength();
 
         EV << "DA received TCP_ACK from meter "
            << pkt->getMeterId()
@@ -67,3 +83,13 @@ void DNP3DA::handleMessage(cMessage *msg)
 
     delete pkt;
 }
+
+void DNP3DA::finish()
+{
+    recordScalar("receivedEventPackets", receivedEventCount);
+    recordScalar("eventBytesTotal", eventBytesTotal);
+    recordScalar("ackBytesTotal", ackBytesTotal);
+    recordScalar("confirmBytesTotal", confirmBytesTotal);
+    recordScalar("tcpAckBytesTotal", tcpAckBytesTotal);
+}
+

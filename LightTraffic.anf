@@ -3,6 +3,8 @@
     <inputs>
         <input pattern="simulations/LightTraffic.vec"/>
         <input pattern="simulations/LightTraffic.sca"/>
+        <input pattern="simulations/HeavyTraffic.vec"/>
+        <input pattern="simulations/HeavyTraffic.sca"/>
     </inputs>
     <charts/>
 </analysis>

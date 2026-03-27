@@ -20,6 +20,9 @@ package basicbaseline;
 //
 simple Concatenator
 {
+    parameters:
+        @signal[queueLength];
+        @statistic[queueLength](title="Queue Length"; source=queueLength; record=vector,mean,max,timeavg);
     gates:
         inout MeterInterface[];
         inout DAInterface;

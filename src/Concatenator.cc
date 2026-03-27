@@ -8,11 +8,27 @@ void Concatenator::initialize()
 {
     endTxEvent = new cMessage("endTxEvent");
     daBusy = false;
+    queueLengthSignal = registerSignal("queueLength");
+    emit(queueLengthSignal, daQueue.getLength());
 }
 
 void Concatenator::enqueueFromMeter(Dnp3Packet *pkt)
 {
+    if (daQueue.getLength() >= maxQueueSize) {
+        droppedPackets++;
+
+        EV << "Concatenator dropped packet from meter "
+           << pkt->getMeterId()
+           << " type=" << pkt->getMsgType()
+           << " seq=" << pkt->getSeq()
+           << " because queue is full\n";
+
+        delete pkt;
+        return;
+    }
+
     daQueue.insert(pkt);
+    emit(queueLengthSignal, daQueue.getLength());
 
     EV << "Concatenator received packet from meter "
        << pkt->getMeterId()
@@ -32,6 +48,7 @@ void Concatenator::startNextTransmissionToDA()
     }
 
     auto *pkt = check_and_cast<Dnp3Packet *>(daQueue.pop());
+    emit(queueLengthSignal, daQueue.getLength());
     cGate *outGate = gate("DAInterface$o");
 
     EV << "Concatenator sent packet immediately to DA: meter="
@@ -115,10 +132,12 @@ void Concatenator::handleMessage(cMessage *msg)
 
 void Concatenator::finish()
 {
+    recordScalar("droppedPackets", droppedPackets);
     cancelAndDelete(endTxEvent);
 
     while (!daQueue.isEmpty()) {
         auto *pkt = check_and_cast<cPacket *>(daQueue.pop());
+        emit(queueLengthSignal, daQueue.getLength());
         delete pkt;
     }
 }

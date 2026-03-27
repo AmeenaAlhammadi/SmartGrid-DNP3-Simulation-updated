@@ -175,28 +175,41 @@ Dnp3Packet& Dnp3Packet::operator=(const Dnp3Packet& other)
 
 void Dnp3Packet::copy(const Dnp3Packet& other)
 {
+    this->msgType = other.msgType;
     this->meterId = other.meterId;
     this->seq = other.seq;
-    this->msgType = other.msgType;
-    this->burst = other.burst;
+    this->genTime = other.genTime;
+    this->retransmitted = other.retransmitted;
 }
 
 void Dnp3Packet::parsimPack(omnetpp::cCommBuffer *b) const
 {
     ::omnetpp::cPacket::parsimPack(b);
+    doParsimPacking(b,this->msgType);
     doParsimPacking(b,this->meterId);
     doParsimPacking(b,this->seq);
-    doParsimPacking(b,this->msgType);
-    doParsimPacking(b,this->burst);
+    doParsimPacking(b,this->genTime);
+    doParsimPacking(b,this->retransmitted);
 }
 
 void Dnp3Packet::parsimUnpack(omnetpp::cCommBuffer *b)
 {
     ::omnetpp::cPacket::parsimUnpack(b);
+    doParsimUnpacking(b,this->msgType);
     doParsimUnpacking(b,this->meterId);
     doParsimUnpacking(b,this->seq);
-    doParsimUnpacking(b,this->msgType);
-    doParsimUnpacking(b,this->burst);
+    doParsimUnpacking(b,this->genTime);
+    doParsimUnpacking(b,this->retransmitted);
+}
+
+const char * Dnp3Packet::getMsgType() const
+{
+    return this->msgType.c_str();
+}
+
+void Dnp3Packet::setMsgType(const char * msgType)
+{
+    this->msgType = msgType;
 }
 
 int Dnp3Packet::getMeterId() const
@@ -219,24 +232,24 @@ void Dnp3Packet::setSeq(int seq)
     this->seq = seq;
 }
 
-const char * Dnp3Packet::getMsgType() const
+omnetpp::simtime_t Dnp3Packet::getGenTime() const
 {
-    return this->msgType.c_str();
+    return this->genTime;
 }
 
-void Dnp3Packet::setMsgType(const char * msgType)
+void Dnp3Packet::setGenTime(omnetpp::simtime_t genTime)
 {
-    this->msgType = msgType;
+    this->genTime = genTime;
 }
 
-bool Dnp3Packet::getBurst() const
+bool Dnp3Packet::getRetransmitted() const
 {
-    return this->burst;
+    return this->retransmitted;
 }
 
-void Dnp3Packet::setBurst(bool burst)
+void Dnp3Packet::setRetransmitted(bool retransmitted)
 {
-    this->burst = burst;
+    this->retransmitted = retransmitted;
 }
 
 class Dnp3PacketDescriptor : public omnetpp::cClassDescriptor
@@ -244,10 +257,11 @@ class Dnp3PacketDescriptor : public omnetpp::cClassDescriptor
   private:
     mutable const char **propertyNames;
     enum FieldConstants {
+        FIELD_msgType,
         FIELD_meterId,
         FIELD_seq,
-        FIELD_msgType,
-        FIELD_burst,
+        FIELD_genTime,
+        FIELD_retransmitted,
     };
   public:
     Dnp3PacketDescriptor();
@@ -314,7 +328,7 @@ const char *Dnp3PacketDescriptor::getProperty(const char *propertyName) const
 int Dnp3PacketDescriptor::getFieldCount() const
 {
     omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
-    return base ? 4+base->getFieldCount() : 4;
+    return base ? 5+base->getFieldCount() : 5;
 }
 
 unsigned int Dnp3PacketDescriptor::getFieldTypeFlags(int field) const
@@ -326,12 +340,13 @@ unsigned int Dnp3PacketDescriptor::getFieldTypeFlags(int field) const
         field -= base->getFieldCount();
     }
     static unsigned int fieldTypeFlags[] = {
+        FD_ISEDITABLE,    // FIELD_msgType
         FD_ISEDITABLE,    // FIELD_meterId
         FD_ISEDITABLE,    // FIELD_seq
-        FD_ISEDITABLE,    // FIELD_msgType
-        FD_ISEDITABLE,    // FIELD_burst
+        FD_ISEDITABLE,    // FIELD_genTime
+        FD_ISEDITABLE,    // FIELD_retransmitted
     };
-    return (field >= 0 && field < 4) ? fieldTypeFlags[field] : 0;
+    return (field >= 0 && field < 5) ? fieldTypeFlags[field] : 0;
 }
 
 const char *Dnp3PacketDescriptor::getFieldName(int field) const
@@ -343,22 +358,24 @@ const char *Dnp3PacketDescriptor::getFieldName(int field) const
         field -= base->getFieldCount();
     }
     static const char *fieldNames[] = {
+        "msgType",
         "meterId",
         "seq",
-        "msgType",
-        "burst",
+        "genTime",
+        "retransmitted",
     };
-    return (field >= 0 && field < 4) ? fieldNames[field] : nullptr;
+    return (field >= 0 && field < 5) ? fieldNames[field] : nullptr;
 }
 
 int Dnp3PacketDescriptor::findField(const char *fieldName) const
 {
     omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
     int baseIndex = base ? base->getFieldCount() : 0;
-    if (strcmp(fieldName, "meterId") == 0) return baseIndex + 0;
-    if (strcmp(fieldName, "seq") == 0) return baseIndex + 1;
-    if (strcmp(fieldName, "msgType") == 0) return baseIndex + 2;
-    if (strcmp(fieldName, "burst") == 0) return baseIndex + 3;
+    if (strcmp(fieldName, "msgType") == 0) return baseIndex + 0;
+    if (strcmp(fieldName, "meterId") == 0) return baseIndex + 1;
+    if (strcmp(fieldName, "seq") == 0) return baseIndex + 2;
+    if (strcmp(fieldName, "genTime") == 0) return baseIndex + 3;
+    if (strcmp(fieldName, "retransmitted") == 0) return baseIndex + 4;
     return base ? base->findField(fieldName) : -1;
 }
 
@@ -371,12 +388,13 @@ const char *Dnp3PacketDescriptor::getFieldTypeString(int field) const
         field -= base->getFieldCount();
     }
     static const char *fieldTypeStrings[] = {
+        "string",    // FIELD_msgType
         "int",    // FIELD_meterId
         "int",    // FIELD_seq
-        "string",    // FIELD_msgType
-        "bool",    // FIELD_burst
+        "omnetpp::simtime_t",    // FIELD_genTime
+        "bool",    // FIELD_retransmitted
     };
-    return (field >= 0 && field < 4) ? fieldTypeStrings[field] : nullptr;
+    return (field >= 0 && field < 5) ? fieldTypeStrings[field] : nullptr;
 }
 
 const char **Dnp3PacketDescriptor::getFieldPropertyNames(int field) const
@@ -459,10 +477,11 @@ std::string Dnp3PacketDescriptor::getFieldValueAsString(omnetpp::any_ptr object,
     }
     Dnp3Packet *pp = omnetpp::fromAnyPtr<Dnp3Packet>(object); (void)pp;
     switch (field) {
+        case FIELD_msgType: return oppstring2string(pp->getMsgType());
         case FIELD_meterId: return long2string(pp->getMeterId());
         case FIELD_seq: return long2string(pp->getSeq());
-        case FIELD_msgType: return oppstring2string(pp->getMsgType());
-        case FIELD_burst: return bool2string(pp->getBurst());
+        case FIELD_genTime: return simtime2string(pp->getGenTime());
+        case FIELD_retransmitted: return bool2string(pp->getRetransmitted());
         default: return "";
     }
 }
@@ -479,10 +498,11 @@ void Dnp3PacketDescriptor::setFieldValueAsString(omnetpp::any_ptr object, int fi
     }
     Dnp3Packet *pp = omnetpp::fromAnyPtr<Dnp3Packet>(object); (void)pp;
     switch (field) {
+        case FIELD_msgType: pp->setMsgType((value)); break;
         case FIELD_meterId: pp->setMeterId(string2long(value)); break;
         case FIELD_seq: pp->setSeq(string2long(value)); break;
-        case FIELD_msgType: pp->setMsgType((value)); break;
-        case FIELD_burst: pp->setBurst(string2bool(value)); break;
+        case FIELD_genTime: pp->setGenTime(string2simtime(value)); break;
+        case FIELD_retransmitted: pp->setRetransmitted(string2bool(value)); break;
         default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'Dnp3Packet'", field);
     }
 }
@@ -497,10 +517,11 @@ omnetpp::cValue Dnp3PacketDescriptor::getFieldValue(omnetpp::any_ptr object, int
     }
     Dnp3Packet *pp = omnetpp::fromAnyPtr<Dnp3Packet>(object); (void)pp;
     switch (field) {
+        case FIELD_msgType: return pp->getMsgType();
         case FIELD_meterId: return pp->getMeterId();
         case FIELD_seq: return pp->getSeq();
-        case FIELD_msgType: return pp->getMsgType();
-        case FIELD_burst: return pp->getBurst();
+        case FIELD_genTime: return pp->getGenTime().dbl();
+        case FIELD_retransmitted: return pp->getRetransmitted();
         default: throw omnetpp::cRuntimeError("Cannot return field %d of class 'Dnp3Packet' as cValue -- field index out of range?", field);
     }
 }
@@ -517,10 +538,11 @@ void Dnp3PacketDescriptor::setFieldValue(omnetpp::any_ptr object, int field, int
     }
     Dnp3Packet *pp = omnetpp::fromAnyPtr<Dnp3Packet>(object); (void)pp;
     switch (field) {
+        case FIELD_msgType: pp->setMsgType(value.stringValue()); break;
         case FIELD_meterId: pp->setMeterId(omnetpp::checked_int_cast<int>(value.intValue())); break;
         case FIELD_seq: pp->setSeq(omnetpp::checked_int_cast<int>(value.intValue())); break;
-        case FIELD_msgType: pp->setMsgType(value.stringValue()); break;
-        case FIELD_burst: pp->setBurst(value.boolValue()); break;
+        case FIELD_genTime: pp->setGenTime(value.doubleValue()); break;
+        case FIELD_retransmitted: pp->setRetransmitted(value.boolValue()); break;
         default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'Dnp3Packet'", field);
     }
 }

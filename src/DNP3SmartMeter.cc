@@ -14,21 +14,36 @@ void DNP3SmartMeter::initialize()
     currentSeq = -1;
     waitingForAck = false;
     packetsSent = 0;
+    currentPacketGenTime = -1;
 
     totalPackets = par("totalPackets");
     ackTimeout = par("ackTimeout");
     eventBytes = par("eventBytes");
+    stopGenerationTime = par("stopGenerationTime");
 
     scheduleAt(simTime() + par("eventInterval").doubleValue(), eventTimer);
 }
 
 void DNP3SmartMeter::sendEventReport(bool isRetransmission)
 {
+    if (isRetransmission)
+        retransmissionCount++;
+
+    if (!isRetransmission)
+        generatedEventCount++;
+
     auto *pkt = new Dnp3Packet(isRetransmission ? "retransmittedEventReport" : "eventReport");
     pkt->setMeterId(par("meterId").intValue());
     pkt->setSeq(currentSeq);
     pkt->setMsgType("EVENT_REPORT");
-    pkt->setBurst(false);
+
+    if (!isRetransmission) {
+        currentPacketGenTime = simTime();
+    }
+
+    pkt->setGenTime(currentPacketGenTime);
+    pkt->setRetransmitted(isRetransmission);
+
     pkt->setByteLength(eventBytes);
 
     cGate *outGate = gate("interface$o");
@@ -45,7 +60,9 @@ void DNP3SmartMeter::sendEventReport(bool isRetransmission)
     EV << "Smart meter " << par("meterId").intValue()
        << (isRetransmission ? " retransmitted " : " sent ")
        << "EVENT_REPORT seq=" << currentSeq
-       << " size=" << eventBytes << " bytes\n";
+       << " size=" << eventBytes
+       << " bytes, genTime=" << currentPacketGenTime
+       << "\n";
 }
 
 void DNP3SmartMeter::sendTcpAck(int meterId, int seqNumber)
@@ -54,7 +71,6 @@ void DNP3SmartMeter::sendTcpAck(int meterId, int seqNumber)
     pkt->setMeterId(meterId);
     pkt->setSeq(seqNumber);
     pkt->setMsgType("TCP_ACK");
-    pkt->setBurst(false);
 
     // Updated TCP ACK size
     pkt->setByteLength(58);
@@ -90,8 +106,9 @@ void DNP3SmartMeter::handleMessage(cMessage *msg)
             scheduleAt(simTime() + ackTimeout, ackTimer);
         }
 
-        if (packetsSent < totalPackets)
-            scheduleAt(simTime() + par("eventInterval").doubleValue(), eventTimer);
+        simtime_t nextEventTime = simTime() + par("eventInterval").doubleValue();
+        if (packetsSent < totalPackets && nextEventTime < stopGenerationTime)
+            scheduleAt(nextEventTime, eventTimer);
 
         return;
     }
@@ -115,6 +132,7 @@ void DNP3SmartMeter::handleMessage(cMessage *msg)
         cancelEvent(ackTimer);
         packetsSent++;
         seq++;
+        currentPacketGenTime = -1;
 
         EV << "Smart meter " << par("meterId").intValue()
            << " received ACK for seq=" << pkt->getSeq() << "\n";
@@ -131,6 +149,9 @@ void DNP3SmartMeter::handleMessage(cMessage *msg)
 
 void DNP3SmartMeter::finish()
 {
+    recordScalar("retransmissions", retransmissionCount);
+    recordScalar("generatedEventPackets", generatedEventCount);
+
     cancelAndDelete(ackTimer);
     cancelAndDelete(eventTimer);
 }

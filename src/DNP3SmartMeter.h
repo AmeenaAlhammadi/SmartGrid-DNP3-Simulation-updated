@@ -17,9 +17,14 @@ class DNP3SmartMeter : public cSimpleModule
     int totalPackets = 0;
     int eventBytes = 442;
     simtime_t ackTimeout;
+    simtime_t stopGenerationTime;
 
     bool waitingForAck = false;
     int currentSeq = -1;
+
+    simtime_t currentPacketGenTime;
+    int retransmissionCount = 0;
+    int generatedEventCount = 0;
 
   protected:
     virtual void initialize() override;

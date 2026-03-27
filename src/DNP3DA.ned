@@ -20,6 +20,8 @@ simple DNP3DA
     parameters:
         int numMeters;
         double processingDelay @unit(s) = default(10ms);
+        @signal[packetDelay];
+        @statistic[packetDelay](title="Packet Delay"; source=packetDelay; record=vector,mean,max,min);
     gates:
         inout interface;
 }

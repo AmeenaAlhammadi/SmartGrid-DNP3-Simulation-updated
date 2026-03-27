@@ -18,12 +18,12 @@ package basicbaseline;
 simple DNP3SmartMeter
 {
     parameters:
-        @class(DNP3SmartMeter);
         int meterId;
-        double eventInterval @unit(s) = default(10s);
-        int eventBytes = default(442);
-        int totalPackets = default(10);
-        double ackTimeout @unit(s) = default(2s);
+        int totalPackets;
+        int eventBytes;
+        double ackTimeout @unit(s);
+        double eventInterval @unit(s);
+        double stopGenerationTime @unit(s);
     gates:
         inout interface;
 }

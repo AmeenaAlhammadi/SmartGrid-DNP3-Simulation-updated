@@ -9,25 +9,25 @@ network DNP3NetworkTopology
     parameters:
         int numMeters = default(5);
 
-        @display("bgb=436,366");
     submodules:
         meter[numMeters]: DNP3SmartMeter {
             parameters:
                 meterId = index;
         }
 
-        concentrator: Concatenator {
-
+        Concatenator: Concatenator {
+            @display("p=292,154");
         }
         distAuto: DNP3DA {
             parameters:
                 numMeters = parent.numMeters;
+                @display("p=54,390");
         }
 
     connections:
         for i=0..numMeters-1 {
-            meter[i].interface <--> {  datarate = 65kbps; delay = 2ms; } <--> concentrator.MeterInterface++;
+            meter[i].interface <--> {  datarate = 65kbps; delay = 2ms; } <--> Concatenator.MeterInterface++;
         }
 
-        concentrator.DAInterface <--> {  datarate = 128kbps; delay = 5ms; } <--> distAuto.interface;
+        Concatenator.DAInterface <--> {  datarate = 128kbps; delay = 5ms; } <--> distAuto.interface;
 }

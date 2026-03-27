@@ -12,6 +12,9 @@ class Concatenator : public cSimpleModule
     cQueue daQueue;
     cMessage *endTxEvent = nullptr;
     bool daBusy = false;
+    int maxQueueSize = 50;
+    int droppedPackets = 0;
+    simsignal_t queueLengthSignal;
 
   protected:
     virtual void initialize() override;

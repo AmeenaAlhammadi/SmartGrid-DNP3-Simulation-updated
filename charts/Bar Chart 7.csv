@@ -1,0 +1,3 @@
+,runID,module,name,value,configname,datetime,datetimef,experiment,inifile,iterationvars,iterationvarsd,iterationvarsf,measurement,network,processid,repetition,replication,resultdir,runnumber,seedset,unit
+0,LightTraffic-0-20260310-06:29:58-35672,DNP3NetworkTopology.distAuto,confirmBytesTotal,84100.0,LightTraffic,20260310-06:29:58,20260310-062958,LightTraffic,omnetpp.ini,,,,,DNP3NetworkTopology,35672,0,#0,results,0,0,
+1,HeavyTraffic-0-20260310-05:38:12-33244,DNP3NetworkTopology.distAuto,confirmBytesTotal,463768.0,HeavyTraffic,20260310-05:38:12,20260310-053812,HeavyTraffic,omnetpp.ini,,,,,DNP3NetworkTopology,33244,0,#0,results,0,0,

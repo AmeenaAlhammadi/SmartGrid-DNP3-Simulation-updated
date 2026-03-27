@@ -36,20 +36,22 @@ class Dnp3Packet;
  * //
  * packet Dnp3Packet
  * {
+ *     string msgType;
  *     int meterId = -1;
  *     int seq = 0;
- *     string msgType;
- *     bool burst = false;
+ *     simtime_t genTime;
+ *     bool retransmitted = false;
  * }
  * </pre>
  */
 class Dnp3Packet : public ::omnetpp::cPacket
 {
   protected:
+    omnetpp::opp_string msgType;
     int meterId = -1;
     int seq = 0;
-    omnetpp::opp_string msgType;
-    bool burst = false;
+    omnetpp::simtime_t genTime = SIMTIME_ZERO;
+    bool retransmitted = false;
 
   private:
     void copy(const Dnp3Packet& other);
@@ -66,17 +68,20 @@ class Dnp3Packet : public ::omnetpp::cPacket
     virtual void parsimPack(omnetpp::cCommBuffer *b) const override;
     virtual void parsimUnpack(omnetpp::cCommBuffer *b) override;
 
+    virtual const char * getMsgType() const;
+    virtual void setMsgType(const char * msgType);
+
     virtual int getMeterId() const;
     virtual void setMeterId(int meterId);
 
     virtual int getSeq() const;
     virtual void setSeq(int seq);
 
-    virtual const char * getMsgType() const;
-    virtual void setMsgType(const char * msgType);
+    virtual omnetpp::simtime_t getGenTime() const;
+    virtual void setGenTime(omnetpp::simtime_t genTime);
 
-    virtual bool getBurst() const;
-    virtual void setBurst(bool burst);
+    virtual bool getRetransmitted() const;
+    virtual void setRetransmitted(bool retransmitted);
 };
 
 inline void doParsimPacking(omnetpp::cCommBuffer *b, const Dnp3Packet& obj) {obj.parsimPack(b);}
