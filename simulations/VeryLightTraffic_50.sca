@@ -1,0 +1,4041 @@
+version 3
+run VeryLightTraffic_50-0-20260420-13:46:12-16152
+attr configname VeryLightTraffic_50
+attr datetime 20260420-13:46:12
+attr datetimef 20260420-134612
+attr experiment VeryLightTraffic_50
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network DNP3NetworkTopology
+attr processid 16152
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../samples/inet4.5/images
+config description "Very light traffic with 50 smart meters"
+config *.numMeters 50
+config *.distAuto.numMeters 50
+config **.eventInterval 20s
+config **.eventBytes 442
+config network DNP3NetworkTopology
+config sim-time-limit 350s
+config output-scalar-file VeryLightTraffic_50.sca
+config output-vector-file VeryLightTraffic_50.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config *.distAuto.processingDelay 10ms
+config **.totalPackets 500
+config **.ackTimeout 2s
+config **.stopGenerationTime 300s
+config *.meter[*].meterId index
+
+par DNP3NetworkTopology.meter[0].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[0].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[0].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[0].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[0].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[0].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[0].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[0].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[0].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[0].interface$o.channel throughput:last 199.90644488218
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[0].interface$o.channel utilization:last 0.0030754053981317
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel throughput:last 50.378067548449
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[0].channel utilization:last 0.00077502744267553
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[1].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[1].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[1].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[1].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[1].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[1].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[1].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[1].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[1].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[1].interface$o.channel throughput:last 199.88655477024
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[1].interface$o.channel utilization:last 0.0030750994120035
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel throughput:last 50.373054913216
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[1].channel utilization:last 0.00077495032914048
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[2].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[2].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[2].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[2].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[2].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[2].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[2].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[2].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[2].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[2].interface$o.channel throughput:last 199.86666861592
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[2].interface$o.channel utilization:last 0.0030747934867572
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel throughput:last 50.3680432754
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[2].channel utilization:last 0.00077487323094916
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[3].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[3].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[3].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[3].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[3].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[3].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[3].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[3].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[3].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[3].interface$o.channel throughput:last 199.84678641804
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[3].interface$o.channel utilization:last 0.0030744876223746
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel throughput:last 50.363032634706
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[3].channel utilization:last 0.000774796148097
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[4].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[4].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[4].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[4].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[4].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[4].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[4].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[4].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[4].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[4].interface$o.channel throughput:last 199.82690817542
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[4].interface$o.channel utilization:last 0.0030741818188375
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel throughput:last 50.358022990835
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[4].channel utilization:last 0.0007747190805794
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[5].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[5].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[5].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[5].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[5].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[5].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[5].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[5].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[5].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[5].interface$o.channel throughput:last 199.80703388688
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[5].interface$o.channel utilization:last 0.0030738760761278
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel throughput:last 50.353014343491
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[5].channel utilization:last 0.00077464202839181
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[6].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[6].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[6].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[6].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[6].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[6].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[6].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[6].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[6].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[6].interface$o.channel throughput:last 199.78716355125
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[6].interface$o.channel utilization:last 0.0030735703942273
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel throughput:last 50.348006692375
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[6].channel utilization:last 0.00077456499152964
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[7].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[7].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[7].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[7].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[7].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[7].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[7].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[7].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[7].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[7].interface$o.channel throughput:last 199.76729716734
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[7].interface$o.channel utilization:last 0.0030732647731179
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel throughput:last 50.34300003719
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[7].channel utilization:last 0.00077448796998832
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[8].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[8].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[8].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[8].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[8].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[8].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[8].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[8].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[8].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[8].interface$o.channel throughput:last 199.74743473397
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[8].interface$o.channel utilization:last 0.0030729592127814
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel throughput:last 50.33799437764
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[8].channel utilization:last 0.00077441096376328
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[9].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[9].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[9].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[9].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[9].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[9].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[9].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[9].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[9].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[9].interface$o.channel throughput:last 199.72757624996
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[9].interface$o.channel utilization:last 0.0030726537131998
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel throughput:last 50.332989713427
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[9].channel utilization:last 0.00077433397284996
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[10].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[10].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[10].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[10].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[10].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[10].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[10].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[10].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[10].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[10].interface$o.channel throughput:last 199.70772171415
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[10].interface$o.channel utilization:last 0.0030723482743548
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel throughput:last 50.327986044255
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[10].channel utilization:last 0.00077425699724378
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[11].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[11].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[11].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[11].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[11].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[11].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[11].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[11].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[11].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[11].interface$o.channel throughput:last 199.68787112534
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[11].interface$o.channel utilization:last 0.0030720428962285
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel throughput:last 50.322983369827
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[11].channel utilization:last 0.00077418003694019
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[12].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[12].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[12].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[12].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[12].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[12].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[12].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[12].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[12].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[12].interface$o.channel throughput:last 199.66802448237
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[12].interface$o.channel utilization:last 0.0030717375788027
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel throughput:last 50.317981689846
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[12].channel utilization:last 0.00077410309193462
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[13].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[13].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[13].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[13].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[13].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[13].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[13].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[13].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[13].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[13].interface$o.channel throughput:last 199.64818178406
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[13].interface$o.channel utilization:last 0.0030714323220593
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel throughput:last 50.312981004015
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[13].channel utilization:last 0.0007740261622225
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[14].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[14].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[14].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[14].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[14].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[14].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[14].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[14].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[14].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[14].interface$o.channel throughput:last 199.62834302922
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[14].interface$o.channel utilization:last 0.0030711271259802
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel throughput:last 50.307981312039
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[14].channel utilization:last 0.00077394924779929
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[15].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[15].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[15].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[15].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[15].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[15].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[15].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[15].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[15].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[15].interface$o.channel throughput:last 199.6085082167
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[15].interface$o.channel utilization:last 0.0030708219905473
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel throughput:last 50.302982613622
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[15].channel utilization:last 0.00077387234866042
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[16].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[16].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[16].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[16].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[16].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[16].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[16].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[16].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[16].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[16].interface$o.channel throughput:last 199.5886773453
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[16].interface$o.channel utilization:last 0.0030705169157425
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel throughput:last 50.297984908466
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[16].channel utilization:last 0.00077379546480134
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[17].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[17].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[17].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[17].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[17].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[17].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[17].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[17].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[17].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[17].interface$o.channel throughput:last 199.56885041386
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[17].interface$o.channel utilization:last 0.0030702119015479
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel throughput:last 50.292988196276
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[17].channel utilization:last 0.00077371859621749
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[18].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[18].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[18].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[18].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[18].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[18].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[18].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[18].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[18].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[18].interface$o.channel throughput:last 199.5490274212
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[18].interface$o.channel utilization:last 0.0030699069479453
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel throughput:last 50.287992476757
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[18].channel utilization:last 0.00077364174290433
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[19].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[19].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[19].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[19].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[19].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[19].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[19].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[19].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[19].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[19].interface$o.channel throughput:last 199.52920836615
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[19].interface$o.channel utilization:last 0.0030696020549166
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel throughput:last 50.282997749611
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[19].channel utilization:last 0.00077356490485729
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[20].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[20].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[20].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[20].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[20].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[20].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[20].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[20].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[20].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[20].interface$o.channel throughput:last 199.50939324754
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[20].interface$o.channel utilization:last 0.0030692972224439
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel throughput:last 50.278004014545
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[20].channel utilization:last 0.00077348808207184
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[21].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[21].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[21].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[21].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[21].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[21].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[21].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[21].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[21].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[21].interface$o.channel throughput:last 199.48958206419
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[21].interface$o.channel utilization:last 0.003068992450509
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel throughput:last 50.273011271261
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[21].channel utilization:last 0.00077341127454343
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[22].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[22].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[22].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[22].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[22].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[22].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[22].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[22].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[22].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[22].interface$o.channel throughput:last 199.46977481493
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[22].interface$o.channel utilization:last 0.003068687739094
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel throughput:last 50.268019519465
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[22].channel utilization:last 0.00077333448226751
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[23].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[23].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[23].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[23].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[23].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[23].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[23].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[23].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[23].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[23].interface$o.channel throughput:last 199.44997149859
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[23].interface$o.channel utilization:last 0.0030683830881809
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel throughput:last 50.263028758862
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[23].channel utilization:last 0.00077325770523954
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[24].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[24].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[24].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[24].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[24].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[24].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[24].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[24].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[24].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[24].interface$o.channel throughput:last 199.43017211399
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[24].interface$o.channel utilization:last 0.0030680784977515
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel throughput:last 50.258038989155
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[24].channel utilization:last 0.00077318094345498
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[25].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[25].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[25].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[25].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[25].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[25].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[25].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[25].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[25].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[25].interface$o.channel throughput:last 199.41037665997
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[25].interface$o.channel utilization:last 0.003067773967788
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel throughput:last 50.253050210051
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[25].channel utilization:last 0.00077310419690929
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[26].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[26].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[26].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[26].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[26].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[26].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[26].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[26].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[26].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[26].interface$o.channel throughput:last 199.39058513536
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[26].interface$o.channel utilization:last 0.0030674694982722
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel throughput:last 50.248062421254
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[26].channel utilization:last 0.00077302746559793
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[27].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[27].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[27].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[27].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[27].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[27].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[27].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[27].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[27].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[27].interface$o.channel throughput:last 199.37079753899
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[27].interface$o.channel utilization:last 0.0030671650891863
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel throughput:last 50.243075622469
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[27].channel utilization:last 0.00077295074951637
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[28].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[28].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[28].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[28].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[28].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[28].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[28].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[28].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[28].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[28].interface$o.channel throughput:last 199.35101386968
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[28].interface$o.channel utilization:last 0.0030668607405122
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel throughput:last 50.238089813401
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[28].channel utilization:last 0.00077287404866007
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[29].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[29].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[29].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[29].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[29].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[29].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[29].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[29].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[29].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[29].interface$o.channel throughput:last 199.33123412627
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[29].interface$o.channel utilization:last 0.0030665564522319
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel throughput:last 50.233104993757
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[29].channel utilization:last 0.0007727973630245
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[30].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[30].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[30].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[30].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[30].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[30].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[30].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[30].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[30].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[30].interface$o.channel throughput:last 199.3114583076
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[30].interface$o.channel utilization:last 0.0030662522243274
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel throughput:last 50.228121163241
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[30].channel utilization:last 0.00077272069260513
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[31].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[31].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[31].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[31].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[31].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[31].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[31].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[31].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[31].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[31].interface$o.channel throughput:last 199.29168641248
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[31].interface$o.channel utilization:last 0.0030659480567808
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel throughput:last 50.223138321559
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[31].channel utilization:last 0.00077264403739743
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[32].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[32].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[32].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[32].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[32].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[32].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[32].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[32].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[32].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[32].interface$o.channel throughput:last 199.27191843976
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[32].interface$o.channel utilization:last 0.0030656439495742
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel throughput:last 50.218156468417
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[32].channel utilization:last 0.00077256739739688
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[33].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[33].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[33].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[33].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[33].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[33].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[33].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[33].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[33].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[33].interface$o.channel throughput:last 199.25215438826
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[33].interface$o.channel utilization:last 0.0030653399026896
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel throughput:last 50.21317560352
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[33].channel utilization:last 0.00077249077259895
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[34].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[34].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[34].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[34].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[34].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[34].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[34].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[34].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[34].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[34].interface$o.channel throughput:last 199.23239425683
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[34].interface$o.channel utilization:last 0.0030650359161089
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel throughput:last 50.208195726575
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[34].channel utilization:last 0.00077241416299912
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[35].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[35].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[35].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[35].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[35].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[35].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[35].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[35].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[35].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[35].interface$o.channel throughput:last 199.21263804428
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[35].interface$o.channel utilization:last 0.0030647319898144
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel throughput:last 50.203216837288
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[35].channel utilization:last 0.00077233756859287
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[36].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[36].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[36].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[36].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[36].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[36].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[36].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[36].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[36].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[36].interface$o.channel throughput:last 199.19288574947
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[36].interface$o.channel utilization:last 0.003064428123788
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel throughput:last 50.198238935365
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[36].channel utilization:last 0.00077226098937567
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[37].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[37].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[37].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[37].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[37].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[37].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[37].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[37].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[37].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[37].interface$o.channel throughput:last 199.17313737122
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[37].interface$o.channel utilization:last 0.0030641243180119
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel throughput:last 50.193262020512
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[37].channel utilization:last 0.00077218442534301
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[38].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[38].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[38].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[38].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[38].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[38].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[38].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[38].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[38].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[38].interface$o.channel throughput:last 199.15339290838
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[38].interface$o.channel utilization:last 0.003063820572468
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel throughput:last 50.188286092435
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[38].channel utilization:last 0.00077210787649037
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[39].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[39].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[39].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[39].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[39].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[39].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[39].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[39].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[39].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[39].interface$o.channel throughput:last 199.13365235976
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[39].interface$o.channel utilization:last 0.0030635168871386
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel throughput:last 50.183311150842
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[39].channel utilization:last 0.00077203134281324
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[40].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[40].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[40].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[40].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[40].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[40].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[40].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[40].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[40].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[40].interface$o.channel throughput:last 199.11391572421
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[40].interface$o.channel utilization:last 0.0030632132620057
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel throughput:last 50.178337195439
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[40].channel utilization:last 0.00077195482430711
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[41].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[41].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[41].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[41].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[41].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[41].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[41].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[41].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[41].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[41].interface$o.channel throughput:last 199.09418300058
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[41].interface$o.channel utilization:last 0.0030629096970514
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel throughput:last 50.173364225933
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[41].channel utilization:last 0.00077187832096747
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[42].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[42].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[42].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[42].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[42].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[42].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[42].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[42].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[42].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[42].interface$o.channel throughput:last 199.07445418768
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[42].interface$o.channel utilization:last 0.0030626061922578
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel throughput:last 50.16839224203
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[42].channel utilization:last 0.00077180183278981
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[43].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[43].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[43].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[43].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[43].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[43].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[43].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[43].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[43].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[43].interface$o.channel throughput:last 199.05472928437
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[43].interface$o.channel utilization:last 0.003062302747607
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel throughput:last 50.163421243438
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[43].channel utilization:last 0.00077172535976961
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[44].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[44].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[44].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[44].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[44].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[44].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[44].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[44].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[44].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[44].interface$o.channel throughput:last 199.03500828948
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[44].interface$o.channel utilization:last 0.0030619993630812
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel throughput:last 50.158451229863
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[44].channel utilization:last 0.00077164890190238
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[45].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[45].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[45].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[45].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[45].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[45].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[45].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[45].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[45].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[45].interface$o.channel throughput:last 199.01529120185
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[45].interface$o.channel utilization:last 0.0030616960386625
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel throughput:last 50.153482201014
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[45].channel utilization:last 0.00077157245918362
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[46].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[46].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[46].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[46].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[46].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[46].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[46].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[46].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[46].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[46].interface$o.channel throughput:last 198.99557802031
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[46].interface$o.channel utilization:last 0.003061392774333
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel throughput:last 50.148514156596
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[46].channel utilization:last 0.00077149603160881
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[47].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[47].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[47].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[47].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[47].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[47].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[47].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[47].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[47].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[47].interface$o.channel throughput:last 198.97586874371
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[47].interface$o.channel utilization:last 0.0030610895700748
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel throughput:last 50.143547096319
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[47].channel utilization:last 0.00077141961917347
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[48].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[48].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[48].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[48].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[48].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[48].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[48].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[48].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[48].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[48].interface$o.channel throughput:last 198.95616337089
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[48].interface$o.channel utilization:last 0.0030607864258702
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel throughput:last 50.13858101989
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[48].channel utilization:last 0.00077134322187309
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[49].interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.meter[49].interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.meter[49].interface$o.channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.meter[49].interface$o.channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.meter[49].interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.meter[49].interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.meter[49].interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.meter[49].interface$o.channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.meter[49].interface$o.channel packetBytes:sum 7000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.meter[49].interface$o.channel throughput:last 198.93646190068
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.meter[49].interface$o.channel utilization:last 0.0030604833417013
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel delay 0.002s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel datarate 65000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel packets:count 29
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel packetBytes:sum 1764
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel throughput:last 50.133615927015
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.MeterInterface$o[49].channel utilization:last 0.00077126683970318
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.Concatenator.DAInterface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.Concatenator.DAInterface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.DAInterface$o.channel delay 0.005s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.Concatenator.DAInterface$o.channel datarate 128000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.Concatenator.DAInterface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.Concatenator.DAInterface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.Concatenator.DAInterface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.Concatenator.DAInterface$o.channel packets:count 1401
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.Concatenator.DAInterface$o.channel packetBytes:sum 350000
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.Concatenator.DAInterface$o.channel throughput:last 9942.6424933804
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.Concatenator.DAInterface$o.channel utilization:last 0.077675894622129
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.distAuto.interface$o.channel typename "\"ned.DatarateChannel\""
+par DNP3NetworkTopology.distAuto.interface$o.channel disabled false
+attr mutable ""
+par DNP3NetworkTopology.distAuto.interface$o.channel delay 0.005s
+attr mutable ""
+attr unit s
+par DNP3NetworkTopology.distAuto.interface$o.channel datarate 128000bps
+attr mutable ""
+attr unit bps
+par DNP3NetworkTopology.distAuto.interface$o.channel ber 0
+attr mutable ""
+par DNP3NetworkTopology.distAuto.interface$o.channel per 0
+attr mutable ""
+scalar DNP3NetworkTopology.distAuto.interface$o.channel packetsDiscarded:count 1
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageDiscarded)
+scalar DNP3NetworkTopology.distAuto.interface$o.channel packets:count 1401
+attr interpolationmode none
+attr recordingmode count
+attr source constant1(messageSent)
+scalar DNP3NetworkTopology.distAuto.interface$o.channel packetBytes:sum 88200
+attr interpolationmode none
+attr recordingmode sum
+attr source packetBytes(messageSent)
+attr unit B
+scalar DNP3NetworkTopology.distAuto.interface$o.channel throughput:last 2506.7576053146
+attr recordingmode last
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar DNP3NetworkTopology.distAuto.interface$o.channel utilization:last 0.019583791583695
+attr recordingmode last
+attr source timeavg(channelBusy)
+par DNP3NetworkTopology.meter[0] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[0] meterId 0
+par DNP3NetworkTopology.meter[0] totalPackets 500
+par DNP3NetworkTopology.meter[0] eventBytes 442
+par DNP3NetworkTopology.meter[0] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[0] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[0] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[0] retransmissions 0
+scalar DNP3NetworkTopology.meter[0] generatedEventPackets 14
+par DNP3NetworkTopology.meter[1] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[1] meterId 1
+par DNP3NetworkTopology.meter[1] totalPackets 500
+par DNP3NetworkTopology.meter[1] eventBytes 442
+par DNP3NetworkTopology.meter[1] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[1] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[1] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[1] retransmissions 0
+scalar DNP3NetworkTopology.meter[1] generatedEventPackets 14
+par DNP3NetworkTopology.meter[2] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[2] meterId 2
+par DNP3NetworkTopology.meter[2] totalPackets 500
+par DNP3NetworkTopology.meter[2] eventBytes 442
+par DNP3NetworkTopology.meter[2] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[2] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[2] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[2] retransmissions 0
+scalar DNP3NetworkTopology.meter[2] generatedEventPackets 14
+par DNP3NetworkTopology.meter[3] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[3] meterId 3
+par DNP3NetworkTopology.meter[3] totalPackets 500
+par DNP3NetworkTopology.meter[3] eventBytes 442
+par DNP3NetworkTopology.meter[3] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[3] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[3] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[3] retransmissions 0
+scalar DNP3NetworkTopology.meter[3] generatedEventPackets 14
+par DNP3NetworkTopology.meter[4] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[4] meterId 4
+par DNP3NetworkTopology.meter[4] totalPackets 500
+par DNP3NetworkTopology.meter[4] eventBytes 442
+par DNP3NetworkTopology.meter[4] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[4] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[4] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[4] retransmissions 0
+scalar DNP3NetworkTopology.meter[4] generatedEventPackets 14
+par DNP3NetworkTopology.meter[5] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[5] meterId 5
+par DNP3NetworkTopology.meter[5] totalPackets 500
+par DNP3NetworkTopology.meter[5] eventBytes 442
+par DNP3NetworkTopology.meter[5] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[5] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[5] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[5] retransmissions 0
+scalar DNP3NetworkTopology.meter[5] generatedEventPackets 14
+par DNP3NetworkTopology.meter[6] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[6] meterId 6
+par DNP3NetworkTopology.meter[6] totalPackets 500
+par DNP3NetworkTopology.meter[6] eventBytes 442
+par DNP3NetworkTopology.meter[6] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[6] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[6] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[6] retransmissions 0
+scalar DNP3NetworkTopology.meter[6] generatedEventPackets 14
+par DNP3NetworkTopology.meter[7] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[7] meterId 7
+par DNP3NetworkTopology.meter[7] totalPackets 500
+par DNP3NetworkTopology.meter[7] eventBytes 442
+par DNP3NetworkTopology.meter[7] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[7] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[7] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[7] retransmissions 0
+scalar DNP3NetworkTopology.meter[7] generatedEventPackets 14
+par DNP3NetworkTopology.meter[8] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[8] meterId 8
+par DNP3NetworkTopology.meter[8] totalPackets 500
+par DNP3NetworkTopology.meter[8] eventBytes 442
+par DNP3NetworkTopology.meter[8] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[8] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[8] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[8] retransmissions 0
+scalar DNP3NetworkTopology.meter[8] generatedEventPackets 14
+par DNP3NetworkTopology.meter[9] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[9] meterId 9
+par DNP3NetworkTopology.meter[9] totalPackets 500
+par DNP3NetworkTopology.meter[9] eventBytes 442
+par DNP3NetworkTopology.meter[9] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[9] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[9] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[9] retransmissions 0
+scalar DNP3NetworkTopology.meter[9] generatedEventPackets 14
+par DNP3NetworkTopology.meter[10] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[10] meterId 10
+par DNP3NetworkTopology.meter[10] totalPackets 500
+par DNP3NetworkTopology.meter[10] eventBytes 442
+par DNP3NetworkTopology.meter[10] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[10] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[10] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[10] retransmissions 0
+scalar DNP3NetworkTopology.meter[10] generatedEventPackets 14
+par DNP3NetworkTopology.meter[11] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[11] meterId 11
+par DNP3NetworkTopology.meter[11] totalPackets 500
+par DNP3NetworkTopology.meter[11] eventBytes 442
+par DNP3NetworkTopology.meter[11] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[11] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[11] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[11] retransmissions 0
+scalar DNP3NetworkTopology.meter[11] generatedEventPackets 14
+par DNP3NetworkTopology.meter[12] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[12] meterId 12
+par DNP3NetworkTopology.meter[12] totalPackets 500
+par DNP3NetworkTopology.meter[12] eventBytes 442
+par DNP3NetworkTopology.meter[12] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[12] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[12] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[12] retransmissions 0
+scalar DNP3NetworkTopology.meter[12] generatedEventPackets 14
+par DNP3NetworkTopology.meter[13] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[13] meterId 13
+par DNP3NetworkTopology.meter[13] totalPackets 500
+par DNP3NetworkTopology.meter[13] eventBytes 442
+par DNP3NetworkTopology.meter[13] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[13] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[13] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[13] retransmissions 0
+scalar DNP3NetworkTopology.meter[13] generatedEventPackets 14
+par DNP3NetworkTopology.meter[14] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[14] meterId 14
+par DNP3NetworkTopology.meter[14] totalPackets 500
+par DNP3NetworkTopology.meter[14] eventBytes 442
+par DNP3NetworkTopology.meter[14] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[14] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[14] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[14] retransmissions 0
+scalar DNP3NetworkTopology.meter[14] generatedEventPackets 14
+par DNP3NetworkTopology.meter[15] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[15] meterId 15
+par DNP3NetworkTopology.meter[15] totalPackets 500
+par DNP3NetworkTopology.meter[15] eventBytes 442
+par DNP3NetworkTopology.meter[15] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[15] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[15] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[15] retransmissions 0
+scalar DNP3NetworkTopology.meter[15] generatedEventPackets 14
+par DNP3NetworkTopology.meter[16] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[16] meterId 16
+par DNP3NetworkTopology.meter[16] totalPackets 500
+par DNP3NetworkTopology.meter[16] eventBytes 442
+par DNP3NetworkTopology.meter[16] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[16] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[16] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[16] retransmissions 0
+scalar DNP3NetworkTopology.meter[16] generatedEventPackets 14
+par DNP3NetworkTopology.meter[17] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[17] meterId 17
+par DNP3NetworkTopology.meter[17] totalPackets 500
+par DNP3NetworkTopology.meter[17] eventBytes 442
+par DNP3NetworkTopology.meter[17] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[17] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[17] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[17] retransmissions 0
+scalar DNP3NetworkTopology.meter[17] generatedEventPackets 14
+par DNP3NetworkTopology.meter[18] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[18] meterId 18
+par DNP3NetworkTopology.meter[18] totalPackets 500
+par DNP3NetworkTopology.meter[18] eventBytes 442
+par DNP3NetworkTopology.meter[18] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[18] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[18] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[18] retransmissions 0
+scalar DNP3NetworkTopology.meter[18] generatedEventPackets 14
+par DNP3NetworkTopology.meter[19] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[19] meterId 19
+par DNP3NetworkTopology.meter[19] totalPackets 500
+par DNP3NetworkTopology.meter[19] eventBytes 442
+par DNP3NetworkTopology.meter[19] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[19] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[19] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[19] retransmissions 0
+scalar DNP3NetworkTopology.meter[19] generatedEventPackets 14
+par DNP3NetworkTopology.meter[20] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[20] meterId 20
+par DNP3NetworkTopology.meter[20] totalPackets 500
+par DNP3NetworkTopology.meter[20] eventBytes 442
+par DNP3NetworkTopology.meter[20] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[20] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[20] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[20] retransmissions 0
+scalar DNP3NetworkTopology.meter[20] generatedEventPackets 14
+par DNP3NetworkTopology.meter[21] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[21] meterId 21
+par DNP3NetworkTopology.meter[21] totalPackets 500
+par DNP3NetworkTopology.meter[21] eventBytes 442
+par DNP3NetworkTopology.meter[21] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[21] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[21] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[21] retransmissions 0
+scalar DNP3NetworkTopology.meter[21] generatedEventPackets 14
+par DNP3NetworkTopology.meter[22] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[22] meterId 22
+par DNP3NetworkTopology.meter[22] totalPackets 500
+par DNP3NetworkTopology.meter[22] eventBytes 442
+par DNP3NetworkTopology.meter[22] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[22] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[22] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[22] retransmissions 0
+scalar DNP3NetworkTopology.meter[22] generatedEventPackets 14
+par DNP3NetworkTopology.meter[23] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[23] meterId 23
+par DNP3NetworkTopology.meter[23] totalPackets 500
+par DNP3NetworkTopology.meter[23] eventBytes 442
+par DNP3NetworkTopology.meter[23] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[23] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[23] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[23] retransmissions 0
+scalar DNP3NetworkTopology.meter[23] generatedEventPackets 14
+par DNP3NetworkTopology.meter[24] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[24] meterId 24
+par DNP3NetworkTopology.meter[24] totalPackets 500
+par DNP3NetworkTopology.meter[24] eventBytes 442
+par DNP3NetworkTopology.meter[24] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[24] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[24] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[24] retransmissions 0
+scalar DNP3NetworkTopology.meter[24] generatedEventPackets 14
+par DNP3NetworkTopology.meter[25] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[25] meterId 25
+par DNP3NetworkTopology.meter[25] totalPackets 500
+par DNP3NetworkTopology.meter[25] eventBytes 442
+par DNP3NetworkTopology.meter[25] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[25] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[25] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[25] retransmissions 0
+scalar DNP3NetworkTopology.meter[25] generatedEventPackets 14
+par DNP3NetworkTopology.meter[26] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[26] meterId 26
+par DNP3NetworkTopology.meter[26] totalPackets 500
+par DNP3NetworkTopology.meter[26] eventBytes 442
+par DNP3NetworkTopology.meter[26] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[26] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[26] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[26] retransmissions 0
+scalar DNP3NetworkTopology.meter[26] generatedEventPackets 14
+par DNP3NetworkTopology.meter[27] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[27] meterId 27
+par DNP3NetworkTopology.meter[27] totalPackets 500
+par DNP3NetworkTopology.meter[27] eventBytes 442
+par DNP3NetworkTopology.meter[27] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[27] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[27] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[27] retransmissions 0
+scalar DNP3NetworkTopology.meter[27] generatedEventPackets 14
+par DNP3NetworkTopology.meter[28] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[28] meterId 28
+par DNP3NetworkTopology.meter[28] totalPackets 500
+par DNP3NetworkTopology.meter[28] eventBytes 442
+par DNP3NetworkTopology.meter[28] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[28] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[28] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[28] retransmissions 0
+scalar DNP3NetworkTopology.meter[28] generatedEventPackets 14
+par DNP3NetworkTopology.meter[29] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[29] meterId 29
+par DNP3NetworkTopology.meter[29] totalPackets 500
+par DNP3NetworkTopology.meter[29] eventBytes 442
+par DNP3NetworkTopology.meter[29] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[29] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[29] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[29] retransmissions 0
+scalar DNP3NetworkTopology.meter[29] generatedEventPackets 14
+par DNP3NetworkTopology.meter[30] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[30] meterId 30
+par DNP3NetworkTopology.meter[30] totalPackets 500
+par DNP3NetworkTopology.meter[30] eventBytes 442
+par DNP3NetworkTopology.meter[30] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[30] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[30] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[30] retransmissions 0
+scalar DNP3NetworkTopology.meter[30] generatedEventPackets 14
+par DNP3NetworkTopology.meter[31] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[31] meterId 31
+par DNP3NetworkTopology.meter[31] totalPackets 500
+par DNP3NetworkTopology.meter[31] eventBytes 442
+par DNP3NetworkTopology.meter[31] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[31] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[31] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[31] retransmissions 0
+scalar DNP3NetworkTopology.meter[31] generatedEventPackets 14
+par DNP3NetworkTopology.meter[32] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[32] meterId 32
+par DNP3NetworkTopology.meter[32] totalPackets 500
+par DNP3NetworkTopology.meter[32] eventBytes 442
+par DNP3NetworkTopology.meter[32] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[32] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[32] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[32] retransmissions 0
+scalar DNP3NetworkTopology.meter[32] generatedEventPackets 14
+par DNP3NetworkTopology.meter[33] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[33] meterId 33
+par DNP3NetworkTopology.meter[33] totalPackets 500
+par DNP3NetworkTopology.meter[33] eventBytes 442
+par DNP3NetworkTopology.meter[33] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[33] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[33] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[33] retransmissions 0
+scalar DNP3NetworkTopology.meter[33] generatedEventPackets 14
+par DNP3NetworkTopology.meter[34] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[34] meterId 34
+par DNP3NetworkTopology.meter[34] totalPackets 500
+par DNP3NetworkTopology.meter[34] eventBytes 442
+par DNP3NetworkTopology.meter[34] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[34] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[34] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[34] retransmissions 0
+scalar DNP3NetworkTopology.meter[34] generatedEventPackets 14
+par DNP3NetworkTopology.meter[35] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[35] meterId 35
+par DNP3NetworkTopology.meter[35] totalPackets 500
+par DNP3NetworkTopology.meter[35] eventBytes 442
+par DNP3NetworkTopology.meter[35] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[35] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[35] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[35] retransmissions 0
+scalar DNP3NetworkTopology.meter[35] generatedEventPackets 14
+par DNP3NetworkTopology.meter[36] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[36] meterId 36
+par DNP3NetworkTopology.meter[36] totalPackets 500
+par DNP3NetworkTopology.meter[36] eventBytes 442
+par DNP3NetworkTopology.meter[36] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[36] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[36] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[36] retransmissions 0
+scalar DNP3NetworkTopology.meter[36] generatedEventPackets 14
+par DNP3NetworkTopology.meter[37] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[37] meterId 37
+par DNP3NetworkTopology.meter[37] totalPackets 500
+par DNP3NetworkTopology.meter[37] eventBytes 442
+par DNP3NetworkTopology.meter[37] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[37] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[37] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[37] retransmissions 0
+scalar DNP3NetworkTopology.meter[37] generatedEventPackets 14
+par DNP3NetworkTopology.meter[38] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[38] meterId 38
+par DNP3NetworkTopology.meter[38] totalPackets 500
+par DNP3NetworkTopology.meter[38] eventBytes 442
+par DNP3NetworkTopology.meter[38] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[38] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[38] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[38] retransmissions 0
+scalar DNP3NetworkTopology.meter[38] generatedEventPackets 14
+par DNP3NetworkTopology.meter[39] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[39] meterId 39
+par DNP3NetworkTopology.meter[39] totalPackets 500
+par DNP3NetworkTopology.meter[39] eventBytes 442
+par DNP3NetworkTopology.meter[39] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[39] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[39] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[39] retransmissions 0
+scalar DNP3NetworkTopology.meter[39] generatedEventPackets 14
+par DNP3NetworkTopology.meter[40] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[40] meterId 40
+par DNP3NetworkTopology.meter[40] totalPackets 500
+par DNP3NetworkTopology.meter[40] eventBytes 442
+par DNP3NetworkTopology.meter[40] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[40] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[40] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[40] retransmissions 0
+scalar DNP3NetworkTopology.meter[40] generatedEventPackets 14
+par DNP3NetworkTopology.meter[41] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[41] meterId 41
+par DNP3NetworkTopology.meter[41] totalPackets 500
+par DNP3NetworkTopology.meter[41] eventBytes 442
+par DNP3NetworkTopology.meter[41] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[41] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[41] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[41] retransmissions 0
+scalar DNP3NetworkTopology.meter[41] generatedEventPackets 14
+par DNP3NetworkTopology.meter[42] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[42] meterId 42
+par DNP3NetworkTopology.meter[42] totalPackets 500
+par DNP3NetworkTopology.meter[42] eventBytes 442
+par DNP3NetworkTopology.meter[42] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[42] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[42] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[42] retransmissions 0
+scalar DNP3NetworkTopology.meter[42] generatedEventPackets 14
+par DNP3NetworkTopology.meter[43] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[43] meterId 43
+par DNP3NetworkTopology.meter[43] totalPackets 500
+par DNP3NetworkTopology.meter[43] eventBytes 442
+par DNP3NetworkTopology.meter[43] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[43] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[43] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[43] retransmissions 0
+scalar DNP3NetworkTopology.meter[43] generatedEventPackets 14
+par DNP3NetworkTopology.meter[44] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[44] meterId 44
+par DNP3NetworkTopology.meter[44] totalPackets 500
+par DNP3NetworkTopology.meter[44] eventBytes 442
+par DNP3NetworkTopology.meter[44] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[44] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[44] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[44] retransmissions 0
+scalar DNP3NetworkTopology.meter[44] generatedEventPackets 14
+par DNP3NetworkTopology.meter[45] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[45] meterId 45
+par DNP3NetworkTopology.meter[45] totalPackets 500
+par DNP3NetworkTopology.meter[45] eventBytes 442
+par DNP3NetworkTopology.meter[45] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[45] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[45] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[45] retransmissions 0
+scalar DNP3NetworkTopology.meter[45] generatedEventPackets 14
+par DNP3NetworkTopology.meter[46] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[46] meterId 46
+par DNP3NetworkTopology.meter[46] totalPackets 500
+par DNP3NetworkTopology.meter[46] eventBytes 442
+par DNP3NetworkTopology.meter[46] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[46] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[46] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[46] retransmissions 0
+scalar DNP3NetworkTopology.meter[46] generatedEventPackets 14
+par DNP3NetworkTopology.meter[47] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[47] meterId 47
+par DNP3NetworkTopology.meter[47] totalPackets 500
+par DNP3NetworkTopology.meter[47] eventBytes 442
+par DNP3NetworkTopology.meter[47] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[47] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[47] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[47] retransmissions 0
+scalar DNP3NetworkTopology.meter[47] generatedEventPackets 14
+par DNP3NetworkTopology.meter[48] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[48] meterId 48
+par DNP3NetworkTopology.meter[48] totalPackets 500
+par DNP3NetworkTopology.meter[48] eventBytes 442
+par DNP3NetworkTopology.meter[48] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[48] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[48] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[48] retransmissions 0
+scalar DNP3NetworkTopology.meter[48] generatedEventPackets 14
+par DNP3NetworkTopology.meter[49] typename "\"basicbaseline.DNP3SmartMeter\""
+par DNP3NetworkTopology.meter[49] meterId 49
+par DNP3NetworkTopology.meter[49] totalPackets 500
+par DNP3NetworkTopology.meter[49] eventBytes 442
+par DNP3NetworkTopology.meter[49] ackTimeout 2s
+attr unit s
+par DNP3NetworkTopology.meter[49] eventInterval 20s
+attr unit s
+par DNP3NetworkTopology.meter[49] stopGenerationTime 300s
+attr unit s
+scalar DNP3NetworkTopology.meter[49] retransmissions 0
+scalar DNP3NetworkTopology.meter[49] generatedEventPackets 14
+par DNP3NetworkTopology.Concatenator typename "\"basicbaseline.Concatenator\""
+scalar DNP3NetworkTopology.Concatenator droppedPackets 0
+scalar DNP3NetworkTopology.Concatenator queueLength:mean 34.957515173152
+attr recordingmode mean
+attr source queueLength
+attr title "Queue Length, mean"
+scalar DNP3NetworkTopology.Concatenator queueLength:max 49
+attr recordingmode max
+attr source queueLength
+attr title "Queue Length, max"
+scalar DNP3NetworkTopology.Concatenator queueLength:timeavg 2.760321153848
+attr recordingmode timeavg
+attr source queueLength
+attr title "Queue Length, timeavg"
+par DNP3NetworkTopology.distAuto typename "\"basicbaseline.DNP3DA\""
+par DNP3NetworkTopology.distAuto numMeters 50
+par DNP3NetworkTopology.distAuto processingDelay 0.01s
+attr unit s
+scalar DNP3NetworkTopology.distAuto receivedEventPackets 700
+scalar DNP3NetworkTopology.distAuto eventBytesTotal 309400
+scalar DNP3NetworkTopology.distAuto ackBytesTotal 47600
+scalar DNP3NetworkTopology.distAuto confirmBytesTotal 40600
+scalar DNP3NetworkTopology.distAuto tcpAckBytesTotal 40600
+scalar DNP3NetworkTopology.distAuto packetDelay:mean 0.7658375
+attr recordingmode mean
+attr source packetDelay
+attr title "Packet Delay, mean"
+scalar DNP3NetworkTopology.distAuto packetDelay:max 1.44265
+attr recordingmode max
+attr source packetDelay
+attr title "Packet Delay, max"
+scalar DNP3NetworkTopology.distAuto packetDelay:min 0.089025
+attr recordingmode min
+attr source packetDelay
+attr title "Packet Delay, min"
+par DNP3NetworkTopology typename "\"basicbaseline.simulations.DNP3NetworkTopology\""
+par DNP3NetworkTopology numMeters 50
+
